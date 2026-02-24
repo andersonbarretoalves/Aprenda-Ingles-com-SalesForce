@@ -15,7 +15,15 @@ const vocabulary = [
   { en: "Lightning Component", pt: "Componente Lightning" },
   { en: "Visualforce Page", pt: "Página Visualforce" },
   { en: "Apex Class", pt: "Classe Apex" },
-  { en: "Salesforce Object", pt: "Objeto Salesforce" }
+  { en: "Salesforce Object", pt: "Objeto Salesforce" },
+  { en: "Object Manager", pt: "Gerenciador de Objetos" },
+  { en: "Permission Sets", pt: "Conjuntos de Permissões" },
+  { en: "Quick Find", pt: "Busca Rápida" },
+  { en: "Installed Packages", pt: "Pacotes instalados" },
+  { en: "Details", pt: "Detalhes" },
+  { en: "schema", pt: "esquema" },
+  { en: "Lightning App Builder", pt: "Criador de aplicativo Lightning" },
+  { en: "Flows", pt: "Fluxos" },
 ];
 
 const phrases = [
