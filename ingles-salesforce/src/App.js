@@ -11,19 +11,30 @@ const vocabulary = [
   { en: "Report", pt: "Relatório" },
   { en: "Workflow", pt: "Fluxo de trabalho" },
   { en: "Trigger", pt: "Gatilho" },
-  { en: "Validation Rule", pt: "Regra de validação" },
-  { en: "Lightning Component", pt: "Componente Lightning" },
-  { en: "Visualforce Page", pt: "Página Visualforce" },
-  { en: "Apex Class", pt: "Classe Apex" },
-  { en: "Salesforce Object", pt: "Objeto Salesforce" },
-  { en: "Object Manager", pt: "Gerenciador de Objetos" },
-  { en: "Permission Sets", pt: "Conjuntos de Permissões" },
+  { en: "Activities", pt: "Atividades" },
+  { en: "tasks", pt: "tarefas" },
+  { en: "Outline", pt: "Estrutura" },
+  { en: "Filter", pt: "Filtro" },
+  { en: "Fields ", pt: "Campos" },
+  { en: "Chatter", pt: "Chatter / Comunicação" },
+  { en: "Customer", pt: "Cliente" },
   { en: "Quick Find", pt: "Busca Rápida" },
   { en: "Installed Packages", pt: "Pacotes instalados" },
   { en: "Details", pt: "Detalhes" },
   { en: "schema", pt: "esquema" },
-  { en: "Lightning App Builder", pt: "Criador de aplicativo Lightning" },
+  { en: "Warm", pt: "Esquentar" },
   { en: "Flows", pt: "Fluxos" },
+  { en: "Owner", pt: "Proprietário" },
+  { en: "lead source", pt: "origem do lead" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
+  { en: "", pt: "" },
 ];
 
 const phrases = [
@@ -66,6 +77,94 @@ const phrases = [
   {
     en: "The integration is not syncing correctly.",
     pt: "A integração não está sincronizando corretamente."
+  },
+  {
+    en: "Opportunities with Projects",
+    pt: "Oportunidades com projetos"
+  },
+  {
+    en: "Campaigns with Contacts",
+    pt: "Campanhas com contatos"
+  },
+  {
+    en: "Leads with Activities",
+    pt: "Leads com Atividades"
+  },
+  {
+    en: "sales overviwer",
+    pt: "supervisor de vendas"
+  },
+  {
+    en: "Validation Rule",
+    pt: "Regra de validação"
+  },
+  {
+    en: "Lightning Component",
+    pt: "Componente Lightning"
+  },
+  {
+    en: "Visualforce Page",
+    pt: "Página Visualforce"
+  },
+  {
+    en: "Apex Class",
+    pt: "Classe Apex"
+  },
+  {
+    en: "Salesforce Object",
+    pt: "Objeto Salesforce"
+  },
+  {
+    en: "Object Manager",
+    pt: "Gerenciador de Objetos"
+  },
+  {
+    en: "New Report",
+    pt: "Novo relatório"
+  },
+  {
+    en: "Direct Customer Accounts",
+    pt: "Contas de clientes diretos"
+  },
+  {
+    en: "Permission Sets",
+    pt: "Conjuntos de Permissões"
+  },
+  {
+    en: "Lightning App Builder",
+    pt: "Criador de aplicativo Lightning"
+  },
+  {
+    en: "Lead Source Report",
+    pt: "Relatório de origem do lead"
+  },
+  {
+    en: "",
+    pt: ""
+  },
+  {
+    en: "",
+    pt: ""
+  },
+  {
+    en: "",
+    pt: ""
+  },
+  {
+    en: "",
+    pt: ""
+  },
+  {
+    en: "",
+    pt: ""
+  },
+  {
+    en: "",
+    pt: ""
+  },
+  {
+    en: "",
+    pt: ""
   }
 ];
 
