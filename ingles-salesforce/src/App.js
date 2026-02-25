@@ -26,15 +26,13 @@ const vocabulary = [
   { en: "Flows", pt: "Fluxos" },
   { en: "Owner", pt: "Proprietário" },
   { en: "lead source", pt: "origem do lead" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
-  { en: "", pt: "" },
+  { en: "Reports", pt: "Relatórios" },
+  { en: "Stage ", pt: "Estágio" },
+  { en: "Amount ", pt: "Valor" },
+  { en: "Summarize", pt: "Resumir" },
+  { en: "Sum ", pt: "Soma" },
+  { en: "Rows", pt: "Linhas" },
+  { en: "Age", pt: "Duração" },
 ];
 
 const phrases = [
@@ -139,32 +137,56 @@ const phrases = [
     pt: "Relatório de origem do lead"
   },
   {
-    en: "",
-    pt: ""
+    en: "Add Opportunity Filter",
+    pt: "Adicionar filtro de oportunidade"
   },
   {
-    en: "",
-    pt: ""
+    en: "Stale Opportunities",
+    pt: "Oportunidades obsoletas"
   },
   {
-    en: "",
-    pt: ""
+    en: "Orphan Contacts",
+    pt: "Contatos órfãos"
   },
   {
-    en: "",
-    pt: ""
+    en: "Contains Partner",
+    pt: "Contém Parceiro"
   },
   {
-    en: "",
-    pt: ""
+    en: "Open Opportunities This Year",
+    pt: "Oportunidades Abertas Este Ano"
   },
   {
-    en: "",
-    pt: ""
+    en: "Detail Rows",
+    pt: "Linhas de detalhe"
   },
   {
-    en: "",
-    pt: ""
+    en: "Closed Cases for All Time",
+    pt: "Casos Fechados de Todos os Tempos"
+  },
+  {
+    en: "Closed Won Opportunities",
+    pt: "Oportunidades Fechadas e Ganhas"
+  },
+  {
+    en: "Next Steps",
+    pt: "Próxima etapa"
+  },
+  {
+    en: "Fiscal Period",
+    pt: "Período Fiscal"
+  },
+  {
+    en: "Opportunity Owner",
+    pt: "Proprietário da Oportunidade"
+  },
+  {
+    en: "Owner Role",
+    pt: "Função do Proprietário"
+  },
+  {
+    en: "Customer Support Reports",
+    pt: "Relatórios de Suporte ao Cliente"
   }
 ];
 
