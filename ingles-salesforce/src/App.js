@@ -200,8 +200,38 @@ const phrases = [
   {
     en: "Let dashboard viewers choose whom they view the dashboard as",
     pt: "Permitir que os visualizadores do painel escolham como exibir o painel"
+  },
+  {
+    en: "Minimum Access - Salesforce",
+    pt: "Acesso Mínimo - Salesforce"
+  },
+  {
+    en: "View Summarys",
+    pt: "Visualizar Resumos"
+  },
+  {
+    en: "Access Granted By",
+    pt: "Acesso Concedido Por"
+  },
+  {
+    en: "Western Sales Team",
+    pt: "Equipe de Vendas Ocidental"
+  },
+  {
+    en: "Permission Sets",
+    pt: "Conjuntos de Permissões"
+  },
+  {
+    en: "Permission Set Overview",
+    pt: "Visão Geral do Conjunto de Permissões"
+  },
+  {
+    en: "Add Assignments",
+    pt: "Adicionar Atribuições"
   }
 ];
+
+Minimum Access - Salesforce
 
 const getRandomItem = (array) => {
   return array[Math.floor(Math.random() * array.length)];
