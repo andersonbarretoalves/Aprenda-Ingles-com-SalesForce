@@ -26,13 +26,14 @@ const vocabulary = [
   { en: "Flows", pt: "Fluxos" },
   { en: "Owner", pt: "Proprietário" },
   { en: "lead source", pt: "origem do lead" },
-  { en: "Reports", pt: "Relatórios" },
   { en: "Stage ", pt: "Estágio" },
   { en: "Amount ", pt: "Valor" },
   { en: "Summarize", pt: "Resumir" },
   { en: "Sum ", pt: "Soma" },
   { en: "Rows", pt: "Linhas" },
   { en: "Age", pt: "Duração" },
+  { en: "Range", pt: "Intervalo" },
+  { en: "Resize", pt: "Redimensionar" },
 ];
 
 const phrases = [
@@ -187,6 +188,18 @@ const phrases = [
   {
     en: "Customer Support Reports",
     pt: "Relatórios de Suporte ao Cliente"
+  },
+  {
+    en: "Leads by Lead Source",
+    pt: "Leads por Origem do Lead"
+  },
+  {
+    en: "Donut Chart",
+    pt: "Gráfico de Anel"
+  },
+  {
+    en: "Let dashboard viewers choose whom they view the dashboard as",
+    pt: "Permitir que os visualizadores do painel escolham como exibir o painel"
   }
 ];
 
