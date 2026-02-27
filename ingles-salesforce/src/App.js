@@ -231,8 +231,6 @@ const phrases = [
   }
 ];
 
-Minimum Access - Salesforce
-
 const getRandomItem = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
