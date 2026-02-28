@@ -1,235 +1,6 @@
 import { useState, useEffect } from "react";
-
-const vocabulary = [
-  { en: "Lead", pt: "Lead / Potencial cliente" },
-  { en: "Opportunity", pt: "Oportunidade" },
-  { en: "Account", pt: "Conta" },
-  { en: "Contact", pt: "Contato" },
-  { en: "Dashboard", pt: "Dashboard / Painel" },
-  { en: "Pipeline", pt: "Pipeline / Funil de vendas" },
-  { en: "Campaign", pt: "Campanha" },
-  { en: "Report", pt: "Relatório" },
-  { en: "Workflow", pt: "Fluxo de trabalho" },
-  { en: "Trigger", pt: "Gatilho" },
-  { en: "Activities", pt: "Atividades" },
-  { en: "tasks", pt: "tarefas" },
-  { en: "Outline", pt: "Estrutura" },
-  { en: "Filter", pt: "Filtro" },
-  { en: "Fields ", pt: "Campos" },
-  { en: "Chatter", pt: "Chatter / Comunicação" },
-  { en: "Customer", pt: "Cliente" },
-  { en: "Quick Find", pt: "Busca Rápida" },
-  { en: "Installed Packages", pt: "Pacotes instalados" },
-  { en: "Details", pt: "Detalhes" },
-  { en: "schema", pt: "esquema" },
-  { en: "Warm", pt: "Esquentar" },
-  { en: "Flows", pt: "Fluxos" },
-  { en: "Owner", pt: "Proprietário" },
-  { en: "lead source", pt: "origem do lead" },
-  { en: "Stage ", pt: "Estágio" },
-  { en: "Amount ", pt: "Valor" },
-  { en: "Summarize", pt: "Resumir" },
-  { en: "Sum ", pt: "Soma" },
-  { en: "Rows", pt: "Linhas" },
-  { en: "Age", pt: "Duração" },
-  { en: "Range", pt: "Intervalo" },
-  { en: "Resize", pt: "Redimensionar" },
-];
-
-const phrases = [
-  {
-    en: "Can you grant me access to the org?",
-    pt: "Você pode me conceder acesso à org?"
-  },
-  {
-    en: "I will deploy this component to production.",
-    pt: "Vou implantar este componente em produção."
-  },
-  {
-    en: "The validation rule is blocking the record.",
-    pt: "A regra de validação está bloqueando o registro."
-  },
-  {
-    en: "We need to run the tests before deploying.",
-    pt: "Precisamos executar os testes antes de implantação."
-  },
-  {
-    en: "The SOQL query is returning too many records.",
-    pt: "A consulta SOQL está retornando muitos registros."
-  },
-  {
-    en: "Can you review my pull request?",
-    pt: "Você pode revisar meu pull request?"
-  },
-  {
-    en: "The batch apex job has failed.",
-    pt: "O job batch apex falhou."
-  },
-  {
-    en: "I need to profile the user's permission.",
-    pt: "Preciso verificar as permissões do usuário."
-  },
-  {
-    en: "Let's schedule a demo for next week.",
-    pt: "Vamos agendar uma demonstração para a próxima semana."
-  },
-  {
-    en: "The integration is not syncing correctly.",
-    pt: "A integração não está sincronizando corretamente."
-  },
-  {
-    en: "Opportunities with Projects",
-    pt: "Oportunidades com projetos"
-  },
-  {
-    en: "Campaigns with Contacts",
-    pt: "Campanhas com contatos"
-  },
-  {
-    en: "Leads with Activities",
-    pt: "Leads com Atividades"
-  },
-  {
-    en: "sales overviwer",
-    pt: "supervisor de vendas"
-  },
-  {
-    en: "Validation Rule",
-    pt: "Regra de validação"
-  },
-  {
-    en: "Lightning Component",
-    pt: "Componente Lightning"
-  },
-  {
-    en: "Visualforce Page",
-    pt: "Página Visualforce"
-  },
-  {
-    en: "Apex Class",
-    pt: "Classe Apex"
-  },
-  {
-    en: "Salesforce Object",
-    pt: "Objeto Salesforce"
-  },
-  {
-    en: "Object Manager",
-    pt: "Gerenciador de Objetos"
-  },
-  {
-    en: "New Report",
-    pt: "Novo relatório"
-  },
-  {
-    en: "Direct Customer Accounts",
-    pt: "Contas de clientes diretos"
-  },
-  {
-    en: "Permission Sets",
-    pt: "Conjuntos de Permissões"
-  },
-  {
-    en: "Lightning App Builder",
-    pt: "Criador de aplicativo Lightning"
-  },
-  {
-    en: "Lead Source Report",
-    pt: "Relatório de origem do lead"
-  },
-  {
-    en: "Add Opportunity Filter",
-    pt: "Adicionar filtro de oportunidade"
-  },
-  {
-    en: "Stale Opportunities",
-    pt: "Oportunidades obsoletas"
-  },
-  {
-    en: "Orphan Contacts",
-    pt: "Contatos órfãos"
-  },
-  {
-    en: "Contains Partner",
-    pt: "Contém Parceiro"
-  },
-  {
-    en: "Open Opportunities This Year",
-    pt: "Oportunidades Abertas Este Ano"
-  },
-  {
-    en: "Detail Rows",
-    pt: "Linhas de detalhe"
-  },
-  {
-    en: "Closed Cases for All Time",
-    pt: "Casos Fechados de Todos os Tempos"
-  },
-  {
-    en: "Closed Won Opportunities",
-    pt: "Oportunidades Fechadas e Ganhas"
-  },
-  {
-    en: "Next Steps",
-    pt: "Próxima etapa"
-  },
-  {
-    en: "Fiscal Period",
-    pt: "Período Fiscal"
-  },
-  {
-    en: "Opportunity Owner",
-    pt: "Proprietário da Oportunidade"
-  },
-  {
-    en: "Owner Role",
-    pt: "Função do Proprietário"
-  },
-  {
-    en: "Customer Support Reports",
-    pt: "Relatórios de Suporte ao Cliente"
-  },
-  {
-    en: "Leads by Lead Source",
-    pt: "Leads por Origem do Lead"
-  },
-  {
-    en: "Donut Chart",
-    pt: "Gráfico de Anel"
-  },
-  {
-    en: "Let dashboard viewers choose whom they view the dashboard as",
-    pt: "Permitir que os visualizadores do painel escolham como exibir o painel"
-  },
-  {
-    en: "Minimum Access - Salesforce",
-    pt: "Acesso Mínimo - Salesforce"
-  },
-  {
-    en: "View Summarys",
-    pt: "Visualizar Resumos"
-  },
-  {
-    en: "Access Granted By",
-    pt: "Acesso Concedido Por"
-  },
-  {
-    en: "Western Sales Team",
-    pt: "Equipe de Vendas Ocidental"
-  },
-  {
-    en: "Permission Sets",
-    pt: "Conjuntos de Permissões"
-  },
-  {
-    en: "Permission Set Overview",
-    pt: "Visão Geral do Conjunto de Permissões"
-  },
-  {
-    en: "Add Assignments",
-    pt: "Adicionar Atribuições"
-  }
-];
+import { vocabulary, phrases } from "./data";
+import WordGame from "./WordGame";
 
 const getRandomItem = (array) => {
   return array[Math.floor(Math.random() * array.length)];
@@ -238,6 +9,7 @@ const getRandomItem = (array) => {
 export default function App() {
   const [current, setCurrent] = useState(null);
   const [showRandom, setShowRandom] = useState(false);
+  const [showGame, setShowGame] = useState(false);
   const [randomVocab, setRandomVocab] = useState(null);
   const [randomPhrase, setRandomPhrase] = useState(null);
 
@@ -267,10 +39,31 @@ export default function App() {
     }
   ];
 
+  if (showGame) {
+    return <WordGame onBack={() => setShowGame(false)} />;
+  }
+
   return (
     <div style={{ padding: 20, fontFamily: "Arial", maxWidth: 600 }}>
       <h1>Aprender Inglês - Salesforce</h1>
       <p>Escolha uma opção abaixo:</p>
+
+      <div
+        onClick={() => setShowGame(true)}
+        style={{
+          border: "2px solid #0077b6",
+          padding: 15,
+          borderRadius: 10,
+          marginTop: 10,
+          cursor: "pointer",
+          background: "#e8f4fc"
+        }}
+      >
+        <strong>🎮 Jogo de Palavras</strong>
+        <p style={{ margin: "5px 0 0 0", fontSize: 14, color: "#666" }}>
+          Quiz de múltipla escolha para praticar vocabulário e frases
+        </p>
+      </div>
 
       <div
         onClick={() => setShowRandom(true)}
