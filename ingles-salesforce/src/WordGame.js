@@ -71,7 +71,7 @@ export default function WordGame({ onBack }) {
   const current = items[currentIndex];
   const correctItem = current;
 
-  if (!mode) {
+  if (!gameStarted && !showResult) {
     return (
       <div style={styles.container}>
         <h1 style={styles.title}>🎮 Jogo de Palavras</h1>
@@ -80,13 +80,13 @@ export default function WordGame({ onBack }) {
         <div style={styles.section}>
           <h3 style={styles.sectionTitle}>O que estudar?</h3>
           <div style={styles.buttonGroup}>
-            <button style={styles.modeBtn} onClick={() => setMode("vocab")}>
+            <button style={{ ...styles.modeBtn, ...(mode === "vocab" ? styles.selected : {}) }} onClick={() => setMode("vocab")}>
               📚 Apenas Vocabulário
             </button>
-            <button style={styles.modeBtn} onClick={() => setMode("phrases")}>
+            <button style={{ ...styles.modeBtn, ...(mode === "phrases" ? styles.selected : {}) }} onClick={() => setMode("phrases")}>
               💬 Apenas Frases
             </button>
-            <button style={styles.modeBtn} onClick={() => setMode("both")}>
+            <button style={{ ...styles.modeBtn, ...(mode === "both" ? styles.selected : {}) }} onClick={() => setMode("both")}>
               🎯 Vocabulário + Frases
             </button>
           </div>
@@ -138,7 +138,7 @@ export default function WordGame({ onBack }) {
           <p style={styles.resultMessage}>
             {percentage >= 80 ? "Excelente! Você está dominando o vocabulário!" : percentage >= 60 ? "Bom trabalho! Continue praticando!" : "Não desanime! Revise e tente novamente!"}
           </p>
-          <button style={styles.startBtn} onClick={() => { setShowResult(false); setMode(null); }}>
+          <button style={styles.startBtn} onClick={() => { setShowResult(false); setGameStarted(false); setMode(null); }}>
             Jogar novamente
           </button>
           <button style={styles.backBtn} onClick={onBack}>
@@ -179,10 +179,10 @@ export default function WordGame({ onBack }) {
         {options.map((opt, i) => {
           const isSelected = selectedAnswer === opt;
           const correct = isCorrectOption(opt);
-          const showResult = answered && (isSelected || correct);
+          const showFeedback = answered && (isSelected || correct);
 
           let btnStyle = { ...styles.optionBtn };
-          if (showResult) {
+          if (showFeedback) {
             if (correct) btnStyle = { ...btnStyle, ...styles.correctBtn };
             else if (isSelected && !correct) btnStyle = { ...btnStyle, ...styles.wrongBtn };
           }
@@ -195,8 +195,8 @@ export default function WordGame({ onBack }) {
               disabled={answered}
             >
               {getOptionText(opt)}
-              {showResult && correct && " ✓"}
-              {showResult && isSelected && !correct && " ✗"}
+              {showFeedback && correct && " ✓"}
+              {showFeedback && isSelected && !correct && " ✗"}
             </button>
           );
         })}
