@@ -34,6 +34,9 @@ export const vocabulary = [
   { en: "Resize", pt: "Redimensionar" },
   { en: "Performance", pt: "Desempenho" },
   { en: "Events", pt: "Eventos" },
+  { en: "Businesses", pt: "Negócios" },
+  { en: "Deals", pt: "Negociações" },
+  { en: "Record", pt: "Registro" },  
 ];
 
 export const phrases = [
@@ -87,4 +90,10 @@ export const phrases = [
   { en: "Today's events", pt: "Eventos de hoje" },
   { en: "Main businesses", pt: "Principais negócios" },
   { en: "Key Deals", pt: "Negociações-Chave" },
+  { en: "Record page", pt: "Página do Registro" },
+  { en: "Salesforce Mobile App", pt: "Aplicativo móvel Salesforce" },
+  { en: "Salesforce Lightning Experience", pt: "Experiência Lightning do Salesforce" },
+  { en: "Highlights panel", pt: "Painel de Destaques" },
+  { en: "Related lists", pt: "Listas relacionadas" },
+  { en: "Activity timeline", pt: "Linha do tempo de atividades" },0
 ];
