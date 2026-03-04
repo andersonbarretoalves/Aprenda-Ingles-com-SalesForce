@@ -6,6 +6,10 @@ Uma aplicação React simples para treinar vocabulário e frases comuns usadas e
 - Interface minimalista para estudar termos (vocabulário) e frases de trabalho.
 - Exibe uma palavra e uma frase aleatória; permite navegar por lições pré-definidas.
 
+## Link
+
+https://aprenda-ingles-com-sales-force.vercel.app/
+
 ## Funcionalidades
 - Lista de vocabulário básico de Salesforce.
 - Lista de frases comuns no ambiente de trabalho.
