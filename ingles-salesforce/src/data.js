@@ -123,6 +123,8 @@ export const vocabulary = [
   { en: "trust", pt: "confiar" },
   { en: "Answer", pt: "resposta" },
   { en: "triggered", pt: "provocada" },
+  { en: "Toggle", pt: "Alternar" },
+  { em: "Solved", pt: "Resolvido"},
 ];
 
 export const phrases = [
@@ -224,4 +226,8 @@ export const phrases = [
   { en: "Fast Field Updates", pt: "Atualizações rápidas de campos" },
   { en: "Record-Triggered Flow", pt: "Fluxo acionado por registro" },
   { en: "Trigger the Flow When", pt: "Acionar o fluxo quando" },
+  { en: "available for output", pt: "disponível para saída" },
+  { en: "Onboarding Lead", pt: "Líder de integração"},
+  { en: "Onboarding Project Initiation", pt: "Iniciação do Projeto de Integração"},
+  { en: "Go To Connector", pt: "Vá para o conector"},
 ];
